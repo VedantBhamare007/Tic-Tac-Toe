@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Akronim&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Akronim', cursive;
+}
+
+header nav{
+    height: 75px;
+    background-color: black;
+    color: white;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 25px;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+.line {
+    background-color: #010101;
+    width: 0;
+    height: 1vw;
+    position: absolute;
+    transition: width 1s ease-in-out;
+    -webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -ms-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+}
+
+.game-container {
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+}
+
+.box {
+    border: 5px solid black;
+    font-size: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.game-info {
+    padding: 0 50px;
+}
+
+.game-info h1 {
+    font-size: 2.5rem;
+}
+
+.game-info div {
+    margin: 10px 0;
+}
+
+.info {
+    font-size: x-large;
+}
+
+.button {
+    margin: 0 25px;
+    padding: 2px 15px;
+    background-color: #f0f0f0;
+    border: 1px solid #0f0f0f;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+    font-size: large;
+    font-weight: bold;
+}
+
+.image-box img {
+    width: 0;
+    transition: width 1s ease-in-out;
+    -webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -ms-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+}
+
+.bt {
+    border-top: 0;
+}
+
+.bb {
+    border-bottom: 0;
+}
+
+.br {
+    border-right: 0;
+}
+
+.bl {
+    border-left: 0;
+}
+
+footer {
+    height: 75px;
+    font-size: 2.5rem;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 950px) {
+    header nav, .game-info h1, footer {
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    .game-container {
+        flex-wrap: wrap;
+    }
+    .game-info {
+        margin: 35px;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 20vw);
+    }
+}
